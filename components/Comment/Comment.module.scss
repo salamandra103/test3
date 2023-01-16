@@ -1,0 +1,32 @@
+.comment {
+    width: 100%;
+
+    :global {
+        .comment {
+            position: relative;
+
+            &__buttons {
+                position: absolute;
+                right: 0;
+                top: 0;
+                display: flex;
+                align-items: center;
+                margin: 0 -5px;
+
+                button {
+                    margin: 0 5px;
+                }
+            }
+
+            &__text {
+                margin-bottom: 30px;
+                display: block;
+            }
+
+            &__enter {
+                inset-inline-end: 8px;
+                inset-block-end: 0;
+            }
+        }
+    }
+}

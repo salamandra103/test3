@@ -1,0 +1,37 @@
+.postCreateForm {
+
+    :global {
+        .post-create-form {
+            &__container {
+                max-width: 500px;
+                width: 100%;
+                position: fixed;
+                right: 45px;
+                top: 45px;
+                max-height: 500px;
+                overflow: auto;
+                padding: 15px;
+                background-color: #fff;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                z-index: 10;
+                transform: translateX(calc(100% + 60px));
+                transition: .2s transform;
+
+                &.active {
+                    transform: translateX(0%);
+                }
+            }
+
+            &__buttons {
+                margin: 0 -5px;
+
+                button {
+                    margin: 0 5px;
+                }
+            }
+        }
+
+
+    }
+}

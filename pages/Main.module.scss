@@ -1,0 +1,32 @@
+.main {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+
+    :global {
+        .main {
+            &__header {
+                margin-bottom: 15px;
+            }
+
+
+            &__item {
+                align-items: start;
+
+                &-buttons {
+                    display: flex;
+                    align-items: center;
+                    margin: 0 -5px;
+
+                    button {
+                        margin: 0 5px;
+                    }
+                }
+            }
+
+            &__description {
+                max-width: 800px;
+            }
+        }
+    }
+}

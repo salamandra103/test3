@@ -1,0 +1,37 @@
+.post {
+    :global {
+        .post {
+            &__header {
+                display: flex;
+            }
+
+            &__back {
+                margin-bottom: 15px;
+            }
+
+
+            &__card {
+                box-shadow: 2px 2px 5px rgba(#000, .2);
+            }
+
+            &__wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            &__text {
+                margin-bottom: 15px;
+            }
+
+            &__add-comment {
+                margin-bottom: 15px;
+            }
+
+            &__comments {
+                margin: 30px 0 0;
+                padding: 0 15px;
+            }
+        }
+    }
+}
