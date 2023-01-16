@@ -11,6 +11,9 @@ import { Post } from '../models/global'
 import styles from './Main.module.scss'
 
 export default function Home() {
+  console.log(process.env.NEXT_PUBLIC_VERCEL_URL);
+  console.log(process.env.VERCEL_URL);
+  
   const [isVisibleEditPostForm, setIsVisibleEditPostForm] = useState(false);
   const [isFetchLoading, setIsFetchLoading] = useState(false);
   const [isCreateLoading, setIsCreateLoading] = useState(false);
