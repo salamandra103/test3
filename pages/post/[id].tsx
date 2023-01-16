@@ -15,7 +15,7 @@ interface Props {
 }
 
 const fetchPost = async (postId: string | string[]): Promise<Post | void> => {
-    return fetch(`/api/posts/?id=${postId}`, {
+    return fetch(`${process.env.API_URL}/api/posts/?id=${postId}`, {
         method: "GET"
     }).then(async res => res.ok ? await res.json() : new Error(res.statusText))
         .then(({ data }: {data: Post}) => {
@@ -149,6 +149,7 @@ export default function PostPage(props: Props) {
 export async function getServerSideProps(context: GetServerSidePropsContext): Promise<GetServerSidePropsResult<Props | Record<string, unknown>>>  {
     if (context.query.id) {
         const post = await fetchPost(context.query.id);
+        
         if (post) {
             return {
                 props: {
