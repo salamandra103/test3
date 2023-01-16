@@ -15,7 +15,7 @@ interface Props {
 }
 
 const fetchPost = async (postId: string | string[]): Promise<Post | void> => {
-    return fetch(`${process.env.API_URL}/api/posts/?id=${postId}`, {
+    return fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/posts/?id=${postId}`, {
         method: "GET"
     }).then(async res => res.ok ? await res.json() : new Error(res.statusText))
         .then(({ data }: {data: Post}) => {
